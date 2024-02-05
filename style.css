@@ -1,0 +1,373 @@
+/*IMPOSTAZIONI GENERALI*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+/*------------------------------------------------*/
+/*PARTE FISSA IN ALTO DELL'HEADER*/
+#H_pagina{
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 10%;
+    border-bottom: solid 1px #F9F9F9;
+    z-index: 1000;
+}
+/*contenitori dentro l'header*/
+/*parte LOGO*/
+#H_pagina .logo{
+    margin-left: 7%;
+     display: flex;
+     flex-wrap: nowrap;
+     align-items: center;
+}
+#H_pagina .logo i{
+    padding-right: 0.5rem;
+    font-size: 2.5rem;
+}
+/*-------*/
+/*parte NAV*/
+#H_pagina nav{
+    margin-right: 7%;
+    width: 25%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    color: #b1acac;
+    cursor: pointer;
+}
+#H_pagina nav div:nth-child(4){/*resume ...*/
+   border: solid 1px rgb(59, 58, 58);
+   color:  rgb(59, 58, 58);
+   border-radius: 25px;
+   padding: 5px 10px; 
+}
+#H_pagina nav div:last-child{/*Il cerchio con t*/
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: rgb(255, 85, 0);
+    color: white;
+}
+/*------------------------------------------------*/
+/*Divido il corpo della pagina in 2 parti con logiche != (MAIN e ASIDE) */
+/*MAIN A SX*/
+main{
+    /*sfondo Grigio chiaro */
+    background-color: #fdfafa;
+    padding-left: 7%;
+    position: absolute;/*rispetto al body*/
+    top:10%;/*parte da sotto header*/
+    left: 0;/*da sx*/
+    width: 67%;/*larghezza fissata ma flessibile*/   
+    border-right: 1px solid #b1acac;
+}
+/*parte top main*/
+#cont_sel{
+    border-bottom: solid 1px #b1acac;
+    width: 95%;
+}
+.selettore{
+    display: inline-block;
+    padding: 5% 3% 1% 1%;
+    border: 0;
+    color: #b1acac;
+    font-weight: bold;
+}
+/*fine parte top main*/
+/*------*/
+/*Inizio Article replicato più volte*/
+main article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 4% 0% 8% 0%;
+
+}
+/*Parte info SX di article*/
+.info{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+flex-wrap: wrap;
+width: 75%;
+}
+    /*Header di article*/
+    .info header img{
+        display: inline-block;
+        height: 100%;
+        border-radius: 50%;
+    }
+    .info header span{
+        position: relative;
+        top: -0.3rem;
+        left: 0.5rem;
+    }
+    .info header span:nth-child(2n){
+        font-weight: bold;
+        font-size: small;
+    }
+    .info header span:nth-child(2n+1){
+        color: #B1ACAC;
+        font-size: smaller;
+        font-weight: bold;
+    }
+    /*Inizio Corpo di article*/
+    .info div:nth-child(3){
+        color: #B1ACAC;
+        font-size: 1rem; 
+        max-height: 2.3rem;
+        overflow: hidden;
+    }
+    /*Inizio footer di article*/
+     .info footer{
+        position: relative;
+        top: 1rem;
+        max-width: 95%;
+     }
+     .info footer span{
+        color: #B1ACAC;
+        padding: 0  0.1rem;
+        font-size: smaller;
+     }
+     .Point{
+        position: relative;
+        top: -0.3rem;
+     }
+      
+     .Type{
+        border-radius: 20px;
+        background-color: #ede6e6;
+        padding: 0.2rem 0.2rem 0.2rem 0.4rem!important; 
+        margin-right: 0.4rem;
+     }
+     /*Icone finali del foter di article*/
+     .info footer i:nth-child(8){
+        position: absolute;
+        right: 2rem;
+        bottom: 0;
+        cursor: pointer;
+     }
+     .info footer i:last-child{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+     }
+
+
+.img{
+position: absolute;
+overflow: hidden;
+right: 4rem;
+max-height: 135px;
+max-width: 10rem;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+}
+
+article .info h3{
+font-weight: bold;
+font-size: 1.5rem;
+}
+/*------------------------------------------------*/
+/*ASIDE A DX*/
+aside{
+    /*sfondo Grigio chiaro */
+    background-color: #fdfafa;
+    border-right: 7% solid  #fdfafa;
+    /*sfondo Grigio chiaro */
+    position: absolute;/*rispetto al body*/
+    top:10%;/*parte da sotto header*/
+    right: 0;/*da dx*/
+    width: 33%;/*larghezza fissata ma flessibile*/
+    border-bottom: solid  19rem  #fdfafa ;
+}
+
+.twitter{
+    position: relative;
+    min-height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.twitter div{
+    margin-bottom: 4%;
+}
+/*----------------------------------------------*/
+/*SECTION TWITTER*/
+/*Prima riga section twitter*/
+.twitter div:first-child{
+    margin-top: 10%;
+    font-size: 2rem;
+}
+.twitter div i:last-child{
+    font-size: 1.5rem;
+    color: #00B2E5;
+}
+.Plus{
+    font-size: 1.8rem;
+    color: #B1ACAC;
+}
+/*Seconda riga section twitter*/
+.twitter div:nth-child(2){
+    max-width: 55%;
+    text-align: center;
+}
+/*Terza riga section twitter*/
+.twitter div:nth-child(3){
+    padding: 2%;
+    border: solid 1px #B1ACAC;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.button i:first-child{
+    color: #00B2E5;
+    font-size: 1.2rem;  
+}
+/*Ultima riga section twitter*/
+.twitter div a:first-child{
+    font-size: 0.8rem;
+    color: #B1ACAC;
+}
+
+.separator{/*Linea separatrice da section sticky*/
+    height: 1px;
+    width: 80%;
+    border-bottom: 1px solid #B1ACAC;
+}
+/*----------------------------------------------*/
+/*SECTION STICKY*/
+.sticky{
+    background-color: #fdfafa;
+    width: 100%;
+    position: sticky;
+    z-index: 1000;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.one{
+    min-width: 80%;
+    text-align: start;
+    font-weight: bold;
+}
+.two{
+    max-width: 80%;
+    text-align: start;
+}
+.category{
+    display: inline-block;
+    margin: 0.6rem 1.3rem 0.6rem 0;
+    background-color: #ede6e6;
+    padding: 3%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/*----------------------------------------------*/
+/*SECTION WHO TO FOLLOW*/
+#who_to{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.tizio{
+    min-width: 80%;
+    max-width: 80%;
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.tizio img{
+  border-radius: 50%;  
+}
+
+.tizio img, .tizio div {
+    margin: 3% 5% 3% 0;
+    text-align: start;
+    font-weight: bold;
+}
+.tizio div span{
+    margin-top: 5%;
+    display: block;
+    font-size: 0.7rem;
+    color: #B1ACAC;
+    max-width: 15rem;
+    max-height: 1.5rem;
+    overflow: hidden;
+    
+}
+
+.Button_span{
+    position: absolute;
+    right: 0;
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px black;
+    border-radius: 20px;
+    padding: 0 5%;
+}
+.tizio .Button_span span{
+    color: black;
+    font-weight: 200;
+}
+
+/*Replica sotto spicky*/
+#clone{
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    min-width: 80%;
+    max-width: 80%;
+    }
+
+#clone .extra{
+    margin: 3rem 0 1.1rem 0;
+    font-weight: bold;
+}
+
+#clone div, #clone h3, #clone header, #clone footer{
+    min-width: 80%;
+    max-width: 80%;
+}
+/*Replica sotto spicky FINE*/
+/*See all*/
+.saved{margin-top: 3rem;
+    color: green;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*
+FOOTER PAGINA*/
+#footer_pagina{
+    margin-left: 10%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-width: 80%;
+    max-width: 80%;
+}
+#footer_pagina a{
+    margin-right: 2.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
